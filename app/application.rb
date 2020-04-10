@@ -1,4 +1,6 @@
 class Application
   @@items =[]
-  def
+  def call(env)
+
+  end
 end
