@@ -6,7 +6,8 @@ class Application
 
     if req.path(/items/)
 
-      
+    else
+      resp.write 
     end
   end
 end
