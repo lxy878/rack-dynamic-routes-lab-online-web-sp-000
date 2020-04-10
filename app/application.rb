@@ -3,9 +3,9 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    "Item not found"
     if req.path.match(/items/)
       item = req.path.split("/items/").last
+      puts req.path
       if @@items.include?(item)
         resp.write item.price
       else
