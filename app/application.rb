@@ -7,11 +7,11 @@ class Application
     if req.path.match(/items/)
       item = req.path.splite("/items/").last
       if @@items.include?(item)
-
+        resp.write item.price
 
       else
 
-        
+
       end
     else
       resp.write "Route not found"
