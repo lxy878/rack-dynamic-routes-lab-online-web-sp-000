@@ -9,7 +9,7 @@ class Application
       if @@items.include?(item)
         resp.write item.price
       else
-
+        resp.write 
         resp.status = 400
       end
     else
