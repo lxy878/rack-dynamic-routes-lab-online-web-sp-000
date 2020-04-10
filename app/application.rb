@@ -5,7 +5,14 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      item = req.path.splite("/items/")
+      item = req.path.splite("/items/").last
+      if @@items.include?(item)
+
+
+      else
+
+        
+      end
     else
       resp.write "Route not found"
       resp.status = 404
