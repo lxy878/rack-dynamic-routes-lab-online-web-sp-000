@@ -6,7 +6,7 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       item_object = @@items.find{|im| i.name == item}
-      if @@items.
+      if @@item_object.nil?
         resp.write item.price
       else
         resp.write "Item not found"
