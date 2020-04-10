@@ -5,8 +5,8 @@ class Application
     req = Rack::Request.new(env)
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      puts @@items.inspect
-      if @@items.include?(item)
+      item_object = @@items.find{|im| i.name == item}
+      if @@items.
         resp.write item.price
       else
         resp.write "Item not found"
